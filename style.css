@@ -1,0 +1,23 @@
+
+
+ label{
+    font-weight: bold;
+}
+
+/* #cv-form{
+    display: none;
+} */
+
+#cv-template{
+    display: none;
+}
+
+.my-image{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.background{
+    background-color: aqua;
+}
+
