@@ -18,6 +18,19 @@
     height: 200px;
 }
 .background{
-    background-color: aqua;
+    background-color: rgb(3, 49, 49);
 }
 
+a{
+    text-decoration: none;
+}
+i{
+    margin-right: 15px;
+}
+.color{
+    color: #fff;
+}
+
+button:hover{
+    color: #000;
+}
