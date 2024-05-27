@@ -29,9 +29,16 @@ function addNewAQField(){
 
 function generateCV(){
 
-    let imgField = document.getElementById("imgField").value;
+    //set image to the CV
+    let file = document.getElementById("imgField").files[0];
+    console.log(file);
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    console.log(reader.result);
     let imgT = document.getElementById("imgT");
-    imgT.src = imgField;
+   reader.onloadend = ()=>{
+    imgT.src = reader.result;
+   }
 
     let nameField = document.getElementById("nameField").value;
     let nameT1 = document.getElementById("nameT1");
@@ -50,19 +57,19 @@ function generateCV(){
 
     let fbField = document.getElementById("fbField").value;
     let fbT = document.getElementById("fbT");
-    fbT.innerHTML = fbField;
+    fbT.href = fbField;
 
     let instaField = document.getElementById("instaField").value;
     let instaT = document.getElementById("instaT");
-    instaT.innerHTML = instaField;
+    instaT.href = instaField;
 
     let linkedinField = document.getElementById("linkedinField").value;
     let linkedT = document.getElementById("linkedT");
-    linkedT.innerHTML = linkedinField;
+    linkedT.href = linkedinField;
 
     let githubField = document.getElementById("githubField").value;
     let githubT = document.getElementById("githubT");
-    githubT.innerHTML = githubField;
+    githubT.href = githubField;
 
     let objectiveField = document.getElementById("objectiveField").value;
     let objectiveT = document.getElementById("objectiveT");
